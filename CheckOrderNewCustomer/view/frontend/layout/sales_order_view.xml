@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <referenceContainer name="sidebar.main" remove="true"/>
+
+    <body>
+        <referenceContainer name="page.main.title">
+            <!--<block class="Magento\Sales\Block\Order\Info" name="order.status"-->
+                   <!--template="Magento_Sales::order/order_status.phtml"/>-->
+            <!--<block class="Magento\Sales\Block\Order\Info" name="order.date"-->
+                   <!--template="Magento_Sales::order/order_date.phtml"/>-->
+            <referenceContainer name="order.actions.container">
+                <block class="Polushkin\CheckOrderNewCustomer\Block\Order\Info\Buttons" as="buttons" name="sales.order.info.buttons"
+                       cacheable="false"/>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
+</page>
